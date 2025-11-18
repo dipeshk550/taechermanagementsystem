@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Teacher Management</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   </head>
@@ -24,8 +23,8 @@
           <ul class="nav nav-pills flex-column">
             <li class="nav-item"><a class="nav-link" href="teachermanagementsystem.html"><i class="fa-solid fa-gauge-high me-2"></i>Dashboard</a></li>
             <li class="nav-item"><a class="nav-link" href="Teacher.html"><i class="fa-solid fa-chalkboard-teacher me-2"></i>Teachers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#courses"><i class="fa-solid fa-book-open me-2"></i>Courses</a></li>
-            <li class="nav-item"><a class="nav-link" href="#schedule"><i class="fa-solid fa-calendar-week me-2"></i>Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html"><i class="fa-solid fa-book-open me-2"></i>Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="schedule.html"><i class="fa-solid fa-calendar-week me-2"></i>Schedule</a></li>
             <li class="nav-item"><a class="nav-link" href="#attendance"><i class="fa-solid fa-user-check me-2"></i>Attendance</a></li>
             <li class="nav-item"><a class="nav-link" href="#performance"><i class="fa-solid fa-chart-line me-2"></i>Performance</a></li>
             <li class="nav-item"><a class="nav-link" href="#reports"><i class="fa-solid fa-file-lines me-2"></i>Reports</a></li>
@@ -46,7 +45,8 @@
               </div>
             </div>
 
-            <div class="row g-3">
+            <!-- First row: Total Teachers, Active Today, Avg Attendance, Pending Reports -->
+            <div class="row g-3 mb-4">
               <div class="col-6 col-md-3">
                 <div class="card p-3">
                   <div class="d-flex justify-content-between align-items-center">
@@ -94,41 +94,73 @@
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!--teacher category-->
-               <div class="d-flex justify-content-between align-items-center mb-3">
-              <h3 class="mb-0 fs-5">Teacher category</h3>
-              </div>
-              <section> 
+           <!-- Teacher & Department Overview -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3 class="mb-0 fs-5">Teacher & Department Overview</h3>
+</div>
+
+<div class="row g-3 mb-4">
+
+  <!-- LEFT COLUMN: Teacher Category -->
+  <div class="col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title text-primary mb-3">Teacher Category</h5>
+        
+        <!-- Full-Time -->
+        <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+          <div>
+            <small class="text-muted">Full-Time</small>
+            <h5 class="mb-0">20</h5>
+          </div>
+          <i class="fa-solid fa-user-tie fs-2 text-primary"></i>
+        </div>
+
+        <!-- Part-Time -->
+        <div class="d-flex justify-content-between align-items-center p-2 bg-light rounded">
+          <div>
+            <small class="text-muted">Part-Time</small>
+            <h5 class="mb-0">6</h5>
+          </div>
+          <i class="fa-solid fa-person-chalkboard fs-2" style="color: #B197FC;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- right side col Department -->
+  <div class="col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title text-success mb-3">Department</h5>
+        
+        <!-- Science -->
+        <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+          <div>
+            <small class="text-muted">Science</small>
+            <h5 class="mb-0">12</h5>
+          </div>
+          <i class="fa-solid fa-flask fs-2" style="color: #FF6B6B;"></i>
+        </div>
+
+        <!-- Humanities -->
+        <div class="d-flex justify-content-between align-items-center p-2 bg-light rounded">
+          <div>
+            <small class="text-muted">Humanities</small>
+            <h5 class="mb-0">8</h5>
+          </div>
+          <i class="fa-solid fa-book-open fs-2" style="color: #4ECDC4;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+            <!-- Recent Activity & Events -->
             <div class="row g-3">
-              <div class="col-6 col-md-3">
-                <div class="card p-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <small class="text-muted">Full-Time Teachers</small>
-                      <h4 class="mb-0">20</h4>
-                    </div>
-                    <i class="fa-solid fa-user-tie fs-2 text-primary"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="card p-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <small class="text-muted">Part-Time Teacher</small>
-                      <h4 class="mb-0">6</h4>
-                    </div>
-                    <i class="fa-solid fa-book fs-2 text-success"></i>
-                  </div>
-                </div>
-              </div>
-              </section>
-
-
-
-
-                 <!-- Recent activity & Events -->
               <div class="col-12 col-lg-6">
                 <div class="card p-3 h-100">
                   <h5 class="card-title">Recent Activities</h5>
@@ -157,7 +189,8 @@
                   </ul>
                 </div>
               </div>
-                        <div class="col-12 col-lg-6">
+
+              <div class="col-12 col-lg-6">
                 <div class="card p-3 h-100">
                   <h5 class="card-title">Upcoming Events</h5>
                   <ul class="list-unstyled small mb-0">
@@ -176,17 +209,8 @@
                   </ul>
                 </div>
               </div>
-
             </div>
           </section>
-          <!--teacher-->
-                     
-          </div>
-
-              </div>
-            </div>
-          </section>
-          
         </main>
       </div>
     </div>
