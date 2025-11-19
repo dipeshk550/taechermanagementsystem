@@ -53,7 +53,7 @@
                     <div class="row mb-3 align-items-center">
 
                         <div class="col-md-3">
-                            <button class="btn btn-success w-100 ">+ Request a Leave</button>
+                            <a href="leavetform.html" class="btn btn-primary  w-100" role="button">+ Request a Leave</a>
                         </div>
 
                         <!-- Middle: Search Bar -->
@@ -100,7 +100,7 @@
                                                     <div class="mb-3">
                                                         <label for="leaveType" class="form-label">Leave Type</label>
                                                         <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Casual</option>
+                                                            <option disabled>---Select---</option>
                                                             <option value="All">All</option>
                                                             <option value="Medical">Medical</option>
                                                             <option value="Casual">Casual</option>
@@ -108,19 +108,27 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="status" class="form-label">Status</label>
-                                                        <input type="text" class="form-control" id="status"
-                                                            name="status" value="Pending">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option disabled>---Select---</option>
+                                                            <option value="Pending">Pending</option>
+                                                            <option value="Approved">Approved</option>
+                                                            <option value="Rejected">Rejected</option>
+                                                        </select>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="shift" class="form-label">Shift</label>
-                                                        <input type="text" class="form-control" id="shift" name="shift"
-                                                            value="All">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option disabled>---Select---</option>
+                                                            <option value="All">All</option>
+                                                            <option value="Morning">Morning</option>
+                                                            <option value="Day">Day</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" onclick="applyFilter()">Apply
+                                            <button type="button" class="btn btn-primary">Apply
                                                 Filter</button>
                                         </div>
                                     </div>
@@ -138,7 +146,7 @@
                         <thead class="table-light">
                             <tr>
                                 <th>Name of Applicant</th>
-                                <th>Program/Sec.</th>
+                                <th>Program</th>
                                 <th>Leave Type</th>
                                 <th>Requested Date</th>
                                 <th>From Date</th>
@@ -153,7 +161,7 @@
                                 <td>
                                     <strong>AAROHAN SHAKYA</strong><br>
                                 </td>
-                                <td>BIM 6th Semester "A"</td>
+                                <td>Marketing </td>
                                 <td>Medical</td>
                                 <td>2025-08-11</td>
                                 <td>2025-08-11</td>
