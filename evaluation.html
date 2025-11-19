@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Performance Evaluation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="p-4">
+
+<div class="container">
+
+  <h2 id="teacherName" class="mb-3">Teacher Performance Evaluation</h2>
+
+  <!-- Overall Score -->
+  <div class="card p-3 mb-4">
+    <h5>Overall Performance Score</h5>
+    <div class="progress mt-2" style="height: 25px;">
+      <div class="progress-bar" id="scoreBar" role="progressbar" style="width: 0%;">
+        <span id="scoreText">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metrics -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card text-center p-3">
+        <h6>Student Results</h6>
+        <h3 id="resultScore">0%</h3>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center p-3">
+        <h6>Principal Feedback</h6>
+        <h3 id="feedbackScore">0 / 5</h3>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center p-3">
+        <h6>Teaching Quality</h6>
+        <h3 id="qualityScore">0%</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTO REWARD -->
+  <div class="card p-3 mb-4" id="rewardSection" style="display:none;">
+    <h4>Reward Issued!</h4>
+    <p>This teacher has been recognized for outstanding performance.</p>
+    <span class="badge bg-success p-2">Top Performer</span>
+  </div>
+
+  <!-- IMPROVEMENT -->
+  <div class="card p-3 mb-4" id="improveSection" style="display:none;">
+    <h4>Suggested Improvements</h4>
+    <ul id="improveList"></ul>
+  </div>
+
+</div>
+
+<script>
+  // ---------- SAMPLE DATA (Replace with DB DATA) ----------
+  const teacherData = {
+    1: {
+      name: "Ram Prasad",
+      studentResults: 88,
+      feedback: 4.6,
+      teachingQuality: 92
+    },
+    2: {
+      name: "Sita Sharma",
+      studentResults: 79,
+      feedback: 4.1,
+      teachingQuality: 85
+    },
+    3: {
+      name: "Hari Bahadur",
+      studentResults: 65,
+      feedback: 3.8,
+      teachingQuality: 72
+    },
+    4: {
+      name: "Anita Gurung",
+      studentResults: 90,
+      feedback: 4.9,
+      teachingQuality: 95
+    }
+  };
+
+  // ---------- GET TEACHER ID FROM URL ----------
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  const teacher = teacherData[id];
+
+  // ---------- UPDATE PAGE ----------
+  document.getElementById("teacherName").innerText =
+    teacher.name + " - Performance Evaluation";
+
+  document.getElementById("resultScore").innerText = teacher.studentResults + "%";
+  document.getElementById("feedbackScore").innerText = teacher.feedback + " / 5";
+  document.getElementById("qualityScore").innerText = teacher.teachingQuality + "%";
+
+  // ---------- SCORE CALCULATION ----------
+  let feedbackPercent = (teacher.feedback / 5) * 100;
+  let score =
+    (teacher.studentResults * 0.5) +
+    (feedbackPercent * 0.3) +
+    (teacher.teachingQuality * 0.2);
+
+  document.getElementById("scoreText").innerText = Math.round(score) + "%";
+  document.getElementById("scoreBar").style.width = score + "%";
+
+  // ---------- AUTO-REWARD SYSTEM ----------
+  if (score >= 85) {
+    document.getElementById("rewardSection").style.display = "block";
+  }
+  else if (score >= 70) {
+    document.getElementById("improveSection").style.display = "block";
+    document.getElementById("improveList").innerHTML = `
+      <li>Attend advanced teaching workshop</li>
+      <li>Enhance student engagement techniques</li>
+      <li>Improve lesson plan depth</li>
+    `;
+  }
+  else {
+    document.getElementById("improveSection").style.display = "block";
+    document.getElementById("improveList").innerHTML = `
+      <li>Join mentoring and coaching sessions</li>
+      <li>Revise teaching strategies</li>
+      <li>Improve classroom management</li>
+    `;
+  }
+
+</script>
+
+</body>
+</html>
