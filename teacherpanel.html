@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
+
 <body class="bg-light">
     <!-- Header with Logo -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="image/aster-logo-R-light.png" alt="Logo" class="me-2" style="height: 30px;">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b5df2a858ec4aadbb02c027613d84ff3152afdd
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -20,14 +27,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
                             <i class="fas fa-user-circle"></i> Teacher Name
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -55,6 +66,8 @@
                     <a href="#schedule" class="list-group-item list-group-item-action" data-bs-toggle="tab">
                         <i class="fas fa-calendar-alt me-2"></i> Schedule
                     </a>
+                    <a href="#leave" class="list-group-item list-group-item-action" data-bs-toggle="tab">
+                        <i class="fas fa-calendar-alt me-2"></i> Leave</a>
                     <a href="#messages" class="list-group-item list-group-item-action" data-bs-toggle="tab">
                         <i class="fas fa-comments me-2"></i> Messages
                     </a>
@@ -159,7 +172,8 @@
                                 <div class="col-md-8">
                                     <div class="card">
                                         <div class="card-header bg-white">
-                                            <h5 class="card-title mb-0"><i class="fas fa-history me-2 text-primary"></i>Recent Activity</h5>
+                                            <h5 class="card-title mb-0"><i
+                                                    class="fas fa-history me-2 text-primary"></i>Recent Activity</h5>
                                         </div>
                                         <div class="card-body">
                                             <div class="table-responsive">
@@ -201,7 +215,9 @@
                                 <div class="col-md-4">
                                     <div class="card">
                                         <div class="card-header bg-white">
-                                            <h5 class="card-title mb-0"><i class="fas fa-calendar-alt me-2 text-primary"></i>Upcoming Events</h5>
+                                            <h5 class="card-title mb-0"><i
+                                                    class="fas fa-calendar-alt me-2 text-primary"></i>Upcoming Events
+                                            </h5>
                                         </div>
                                         <div class="card-body">
                                             <div class="list-group">
@@ -235,7 +251,8 @@
                             <!-- Student List -->
                             <div class="card mt-4">
                                 <div class="card-header bg-white">
-                                    <h5 class="card-title mb-0"><i class="fas fa-users me-2 text-primary"></i>Students</h5>
+                                    <h5 class="card-title mb-0"><i class="fas fa-users me-2 text-primary"></i>Students
+                                    </h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -253,7 +270,8 @@
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>John Smith</span>
@@ -263,15 +281,19 @@
                                                     <td>12</td>
                                                     <td>A+</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>Emily Johnson</span>
@@ -281,15 +303,19 @@
                                                     <td>15</td>
                                                     <td>A</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>Michael Brown</span>
@@ -299,15 +325,19 @@
                                                     <td>8</td>
                                                     <td>B+</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>Sarah Davis</span>
@@ -317,9 +347,12 @@
                                                     <td>22</td>
                                                     <td>A-</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -355,7 +388,8 @@
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>John Smith</span>
@@ -366,15 +400,19 @@
                                                     <td>john@example.com</td>
                                                     <td>(123) 456-7890</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>Emily Johnson</span>
@@ -385,15 +423,19 @@
                                                     <td>emily@example.com</td>
                                                     <td>(234) 567-8901</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>Michael Brown</span>
@@ -404,15 +446,19 @@
                                                     <td>michael@example.com</td>
                                                     <td>(345) 678-9012</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;">
+                                                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                                style="width: 40px; height: 40px;">
                                                                 <i class="fas fa-user"></i>
                                                             </div>
                                                             <span>Sarah Davis</span>
@@ -423,9 +469,12 @@
                                                     <td>sarah@example.com</td>
                                                     <td>(456) 789-0123</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                                class="fas fa-eye"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -495,6 +544,7 @@
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 <div class="col-md-6 mb-4">
                                     <div class="card h-100">
                                         <div class="card-body">
@@ -512,6 +562,8 @@
                                         </div>
                                     </div>
                                 </div>
+=======
+>>>>>>> 3b5df2a858ec4aadbb02c027613d84ff3152afdd
                             </div>
                         </div>
 
@@ -545,8 +597,10 @@
                                                     <td><span class="badge bg-success">A+</span></td>
                                                     <td>Nov 15, 2025</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -556,8 +610,10 @@
                                                     <td><span class="badge bg-success">A</span></td>
                                                     <td>Nov 16, 2025</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -567,8 +623,10 @@
                                                     <td><span class="badge bg-warning">B+</span></td>
                                                     <td>Nov 17, 2025</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -578,8 +636,10 @@
                                                     <td><span class="badge bg-success">A-</span></td>
                                                     <td>Nov 18, 2025</td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-success me-1"><i class="fas fa-edit"></i></button>
-                                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                                        <button class="btn btn-sm btn-outline-success me-1"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"><i
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -653,6 +713,187 @@
                             </div>
                         </div>
 
+                        <!-- Leave Tab -->
+                        <div class="tab-pane fade" id="leave">
+                            <!-- Top Bar -->
+                            <div class="row mb-3 align-items-center">
+
+                                <div class="col-md-3">
+                                    <a href="leavetform.html" class="btn btn-primary  w-100" role="button">+
+                                        Request a Leave</a>
+                                </div>
+
+                                <!-- Middle: Search Bar -->
+                                <div class="col-md-6 d-flex justify-content-center ">
+                                    <input type="text" class="form-control"
+                                        placeholder="Search type and hit enter" style="max-width: 300px;">
+                                </div>
+
+                                <!-- Right: Icons -->
+                                <div class="col-md-3 d-flex justify-content-end gap-2">
+                                    <button type="button" class="btn btn-outline-primary shadow"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-title="Export to Excel">
+                                        <i class="bi bi-file-earmark-excel"></i>
+                                    </button>
+
+
+                                    <button type="button" class="btn btn-outline-secondary shadow"
+                                        data-bs-toggle="modal" data-bs-target="#filterModal">
+                                        <i class="bi bi-funnel"></i>
+                                    </button>
+                                    <!--Modal Form filter -->
+                                    <div class="modal fade modal-right" id="filterModal" tabindex="-1"
+                                        aria-labelledby="filterModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog ">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary text-white">
+                                                    <h5 class="modal-title" id="filterModalLabel">
+                                                        Apply Filter</h5>
+                                                    <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form id="filterForm">
+                                                        <div class="row">
+                                                            <div class="mb-3 col-md-6">
+                                                                <label for="fromDate"
+                                                                    class="form-label">From</label>
+                                                                <input type="date" class="form-control"
+                                                                    id="fromDate" name="from"
+                                                                    value="2025-01-01">
+                                                            </div>
+                                                            <div class="mb-3 col-md-6">
+                                                                <label for="toDate"
+                                                                    class="form-label">To</label>
+                                                                <input type="date" class="form-control"
+                                                                    id="toDate" name="to" value="2025-11-18">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="leaveType" class="form-label">Leave
+                                                                    Type</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option disabled>---Select---
+                                                                    </option>
+                                                                    <option value="All">All</option>
+                                                                    <option value="Medical">Medical
+                                                                    </option>
+                                                                    <option value="Casual">Casual
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="status"
+                                                                    class="form-label">Status</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option disabled>---Select---
+                                                                    </option>
+                                                                    <option value="Pending">Pending
+                                                                    </option>
+                                                                    <option value="Approved">
+                                                                        Approved</option>
+                                                                    <option value="Rejected">
+                                                                        Rejected</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="shift"
+                                                                    class="form-label">Shift</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option disabled>---Select---
+                                                                    </option>
+                                                                    <option value="All">All</option>
+                                                                    <option value="Morning">Morning
+                                                                    </option>
+                                                                    <option value="Day">Day</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary">Apply
+                                                        Filter</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Table -->
+                            <div class="table-wrapper mt-5">
+                                <table class="table table-bordered align-middle text-center">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Name of Applicant</th>
+                                            <th>Program</th>
+                                            <th>Leave Type</th>
+                                            <th>Requested Date</th>
+                                            <th>From Date</th>
+                                            <th>To Date</th>
+                                            <th>No. of Days</th>
+                                            <th>Request Type</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong>AAROHAN SHAKYA</strong><br>
+                                            </td>
+                                            <td>Marketing </td>
+                                            <td>Medical</td>
+                                            <td>2025-08-11</td>
+                                            <td>2025-08-11</td>
+                                            <td>2025-08-11</td>
+                                            <td>1</td>
+                                            <td>prior</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div>
+                                    Show Rows:
+                                    <select class="form-select d-inline-block" style="width: 70px;">
+                                        <option selected>10</option>
+                                        <option>20</option>
+                                        <option>50</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Messages Tab -->
                         <div class="tab-pane fade" id="messages">
                             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -669,7 +910,8 @@
                                                 <h6 class="mb-1">Parent Meeting Request</h6>
                                                 <small class="text-muted">Nov 18, 2025</small>
                                             </div>
-                                            <p class="mb-1">John Smith's parent requested a meeting for next week</p>
+                                            <p class="mb-1">John Smith's parent requested a meeting for next
+                                                week</p>
                                             <small class="text-muted">From: Sarah Johnson</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action">
@@ -677,7 +919,8 @@
                                                 <h6 class="mb-1">Assignment Feedback</h6>
                                                 <small class="text-muted">Nov 17, 2025</small>
                                             </div>
-                                            <p class="mb-1">Your recent assignment has been graded and feedback is available</p>
+                                            <p class="mb-1">Your recent assignment has been graded and feedback
+                                                is available</p>
                                             <small class="text-muted">From: Admin</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action">
@@ -685,7 +928,8 @@
                                                 <h6 class="mb-1">System Update</h6>
                                                 <small class="text-muted">Nov 16, 2025</small>
                                             </div>
-                                            <p class="mb-1">The system will be updated on Saturday for maintenance</p>
+                                            <p class="mb-1">The system will be updated on Saturday for
+                                                maintenance</p>
                                             <small class="text-muted">From: IT Department</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action">
@@ -693,7 +937,8 @@
                                                 <h6 class="mb-1">Class Schedule Change</h6>
                                                 <small class="text-muted">Nov 15, 2025</small>
                                             </div>
-                                            <p class="mb-1">Your Tuesday Physics class has been moved to Thursday</p>
+                                            <p class="mb-1">Your Tuesday Physics class has been moved to
+                                                Thursday</p>
                                             <small class="text-muted">From: Academic Office</small>
                                         </a>
                                     </div>
@@ -714,7 +959,8 @@
                                     <div class="card h-100">
                                         <div class="card-body">
                                             <h5 class="card-title">Student Performance Report</h5>
-                                            <p class="card-text">Detailed analysis of student grades and progress</p>
+                                            <p class="card-text">Detailed analysis of student grades and
+                                                progress</p>
                                             <div class="d-flex justify-content-between">
                                                 <small class="text-muted">Generated: Nov 18, 2025</small>
                                                 <span class="badge bg-primary">PDF</span>
@@ -746,7 +992,8 @@
                                     <div class="card h-100">
                                         <div class="card-body">
                                             <h5 class="card-title">Assignment Submission Report</h5>
-                                            <p class="card-text">Summary of assignment submissions and grades</p>
+                                            <p class="card-text">Summary of assignment submissions and grades
+                                            </p>
                                             <div class="d-flex justify-content-between">
                                                 <small class="text-muted">Generated: Nov 10, 2025</small>
                                                 <span class="badge bg-warning">Excel</span>
@@ -824,8 +1071,18 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
 </body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b5df2a858ec4aadbb02c027613d84ff3152afdd
 </html>
