@@ -51,32 +51,26 @@
             <main class="col-12 col-md-9 col-lg-10 p-4">
                 <div class="container bg-white p-4 rounded shadow-sm">
 
-                    <!-- Top Bar -->
+                    <!-- Top Bar: Search + Export + Filter -->
                     <div class="row mb-3 align-items-center">
 
-                        <div class="col-md-3">
-                            <a href="leavetform.html" class="btn btn-primary  w-100" role="button">+ Request a Leave</a>
+                        <!-- Search in center -->
+                        <div class="col-md-9 d-flex justify-content-center">
+                            <input type="text" class="form-control" placeholder="Search by name, type, or date"
+                                style="max-width: 350px;margin-left: 120px;">
                         </div>
 
-                        <!-- Middle: Search Bar -->
-                        <div class="col-md-6 d-flex justify-content-center ">
-                            <input type="text" class="form-control" placeholder="Search type and hit enter"
-                                style="max-width: 300px;">
-                        </div>
-
-                        <!-- Right: Icons -->
+                        <!-- Icons on right -->
                         <div class="col-md-3 d-flex justify-content-end gap-2">
-                            <button type="button" class="btn btn-outline-primary shadow" data-bs-toggle="tooltip"
-                                data-bs-placement="top" data-bs-title="Export to Excel">
+                            <button class="btn btn-outline-primary" data-bs-toggle="tooltip"
+                                data-bs-title="Export to Excel">
                                 <i class="bi bi-file-earmark-excel"></i>
                             </button>
 
-
-                            <button type="button" class="btn btn-outline-secondary shadow" data-bs-toggle="modal"
-                                data-bs-target="#filterModal">
+                            <button class="btn btn-outline-secondary" data-bs-toggle="tooltip"
+                                data-bs-title="Filter Leave Records" data-bs-target="#filterModal">
                                 <i class="bi bi-funnel"></i>
                             </button>
-                            <!--Modal Form filter -->
                             <div class="modal fade modal-right" id="filterModal" tabindex="-1"
                                 aria-labelledby="filterModalLabel" aria-hidden="true">
                                 <div class="modal-dialog ">
@@ -136,74 +130,170 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                    </div>
+
+                    <!-- Filter Row -->
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>All Leave Types</option>
+                                <option>Sick Leave</option>
+                                <option>Casual Leave</option>
+                                <option>Medical Leave</option>
+                                <option>Emergency Leave</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>Status: All</option>
+                                <option>Pending</option>
+                                <option>Approved</option>
+                                <option>Rejected</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="col-md-3">
+                            <input type="date" class="form-control">
                         </div>
                     </div>
-                </div>
 
+                    <!-- Leave Table -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Applicant</th>
+                                    <th>Program</th>
+                                    <th>Leave Type</th>
+                                    <th>Requested Date</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Days</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
 
-                <!-- Table -->
-                <div class="table-wrapper mt-5">
-                    <table class="table table-bordered align-middle text-center">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Name of Applicant</th>
-                                <th>Program</th>
-                                <th>Leave Type</th>
-                                <th>Requested Date</th>
-                                <th>From Date</th>
-                                <th>To Date</th>
-                                <th>No. of Days</th>
-                                <th>Request Type</th>
-                            </tr>
-                        </thead>
+                            <tbody>
+                                <!-- Teacher 1 -->
+                                <tr>
+                                    <td><strong>AAROCHAN SHAKYA</strong></td>
+                                    <td>BIM 6th Semester "A"</td>
+                                    <td>Medical</td>
+                                    <td>2025-08-11</td>
+                                    <td>2025-08-11</td>
+                                    <td>2025-08-11</td>
+                                    <td>1</td>
+                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm">Approve</button>
+                                        <button class="btn btn-danger btn-sm">Reject</button>
+                                    </td>
+                                </tr>
 
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>AAROHAN SHAKYA</strong><br>
-                                </td>
-                                <td>Marketing </td>
-                                <td>Medical</td>
-                                <td>2025-08-11</td>
-                                <td>2025-08-11</td>
-                                <td>2025-08-11</td>
-                                <td>1</td>
-                                <td>prior</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                <!-- Teacher 2 -->
+                                <tr>
+                                    <td><strong>SITA THAPA</strong></td>
+                                    <td>BCA 4th Semester "B"</td>
+                                    <td>Sick Leave</td>
+                                    <td>2025-09-02</td>
+                                    <td>2025-09-02</td>
+                                    <td>2025-09-03</td>
+                                    <td>2</td>
+                                    <td><span class="badge bg-info text-dark">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm">Approve</button>
+                                        <button class="btn btn-danger btn-sm">Reject</button>
+                                    </td>
+                                </tr>
 
-                <!-- Pagination -->
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                    <div>
-                        Show Rows:
-                        <select class="form-select d-inline-block" style="width: 70px;">
-                            <option selected>10</option>
-                            <option>20</option>
-                            <option>50</option>
-                        </select>
+                                <!-- Teacher 3 -->
+                                <tr>
+                                    <td><strong>RAJEEV MAHARJAN</strong></td>
+                                    <td>BIT 3rd Semester "A"</td>
+                                    <td>Casual Leave</td>
+                                    <td>2025-07-21</td>
+                                    <td>2025-07-21</td>
+                                    <td>2025-07-22</td>
+                                    <td>2</td>
+                                    <td><span class="badge bg-success">Approved</span></td>
+                                    <td>
+                                        <button class="btn btn-secondary btn-sm" disabled>Approved</button>
+                                    </td>
+                                </tr>
+
+                                <!-- Teacher 4 -->
+                                <tr>
+                                    <td><strong>KRISHNA SHRESTHA</strong></td>
+                                    <td>MBS 1st Semester</td>
+                                    <td>Emergency Leave</td>
+                                    <td>2025-10-5</td>
+                                    <td>2025-10-06</td>
+                                    <td>2025-10-10</td>
+                                    <td>5</td>
+                                    <td><span class="badge bg-danger">Rejected</span></td>
+                                    <td>
+                                        <button class="btn btn-secondary btn-sm" disabled>Rejected</button>
+                                    </td>
+                                </tr>
+
+                                <!-- Teacher 5 -->
+                                <tr>
+                                    <td><strong>KAMALA GURUNG</strong><br></td>
+                                    <td>BIM 2nd Semester "C"</td>
+                                    <td>Maternity Leave</td>
+                                    <td>2025-06-15</td>
+                                    <td>2025-06-20</td>
+                                    <td>2025-07-20</td>
+                                    <td>31</td>
+                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm">Approve</button>
+                                        <button class="btn btn-danger btn-sm">Reject</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
                     </div>
 
-                    <div>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            Show Rows:
+                            <select class="form-select d-inline-block" style="width: 70px;">
+                                <option selected>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                        <div>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
                     </div>
                 </div>
             </main>
